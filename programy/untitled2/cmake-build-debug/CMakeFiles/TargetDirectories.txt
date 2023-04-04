@@ -1,0 +1,3 @@
+/home/magdalena/2rok1semestr/akiso/lista5/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir
+/home/magdalena/2rok1semestr/akiso/lista5/untitled2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/magdalena/2rok1semestr/akiso/lista5/untitled2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

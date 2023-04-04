@@ -1,0 +1,51 @@
+@charset 'utf-8';
+@import url(_colors.scss);
+@import url(_text.scss);
+@import url(_mixin.scss);
+
+body{
+    font-family: $MyFontText;
+    background: {
+        image: $MyBackgroundImg;
+        repeat: no-repeat;
+        attachment: fixed;
+        size: cover;
+    }
+}
+
+div{
+    header{
+        color: $MyFootercolor;
+        font-size: $MyHeaderbSize;
+    }
+}
+
+nav{
+    background-color: $MyBackgroundColor;
+    font-size: $MyParagraphSize;
+    display: $MyDisplay;
+    align-items: $MyAlignItems;
+    padding: 1 rem;
+    p{
+        margin-right: 1.2vw;
+        color: $MyMenuColor;
+        text-decoration: double;
+    }
+    
+}
+
+main{
+    font-size: $MyHeaderSize;
+    .img{
+        width: 25rem;
+        @include size(5px, 5px,left);
+    }
+    .img1{
+        width: 20rem;
+        @include size(5px, 5px,right);
+    }
+}
+
+footer{
+    @include footer();
+}

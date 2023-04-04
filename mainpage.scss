@@ -1,0 +1,70 @@
+@charset 'utf-8';
+@import url(_colors.scss);
+@import url(_text.scss);
+@import url(_mixin.scss);
+
+body{
+    font-family: $MyFontText;
+    background: {
+        image: $MyBackgroundImg;
+        repeat: no-repeat;
+        attachment: fixed;
+        size: cover;
+    }
+}
+
+div{
+    font-size: $MyHeaderSize;
+}
+
+section{
+    flex-direction: row;
+    display: $MyDisplay;
+    gap: 10px;
+    p{
+        font-size: $MyTextSize;
+    }
+    .img{
+        float: left;
+        width:25%;
+        height:30%;
+        @include size(5px, 5px);
+    }
+
+    .img1{
+        float: right;
+        width: 15%;
+        height: 30%;
+        
+    }
+    @media ($MyMedia){
+        .img{
+            width: 95%;
+            @include size(5px, 5px,none);
+        }
+    
+        .img1{
+            width: 95%;
+            @include size(5px, 5px,none);
+        }
+    }
+}
+
+nav{
+        background-color:$MyBackgroundColor;
+        font-size: $MyParagraphSize;
+        min-height: 60px;
+        display: $MyDisplay;
+        align-items: $MyAlignItems;
+        padding: 0.1rem;
+
+        p{
+            margin-right: 2vw;
+            color:$MyTextColor;
+	        text-decoration:double;
+        }
+}
+
+footer{
+    @include footer();
+}

@@ -1,0 +1,41 @@
+#!/bin/bash
+
+function my_ps
+{
+    pid_array=`ls /proc | grep -E '^[0-9]+$'`
+    
+    cat /dev/null > .data.ps
+
+    for pid in $pid_array
+    do
+        if [ -r /proc/$pid/stat ]
+        then
+            state_array=( `sed -E 's/(\([^\s)]+)\s([^)]+\))/\1_\2/g' /proc/$pid/stat` )
+            comm=( `grep -Po '^[^\s\/]+' /proc/$pid/comm` )
+            tty=(`cat /proc/tty`)
+            
+            state=${state_array[2]}
+            ppid=${state_array[3]}
+            rss=${state_array[23]}
+            pgid=${state_array[4]}
+            sid=${state_array[5]}
+            
+            printf "%-10d %-10d %-4s %-18s %-6d %-6ld %-6d %-10d\n" $pid $ppid $state $comm $tty $rss $pgid $sid>>.data.ps
+            
+   fi
+done
+
+clear 
+	    printf "\e[30;107m%-8s %-10s %-8s %-16s %-6s %-6s %-6s %-6s\e[0m\n" "PID" "PPID" "STATE" "COMMAND" "TTY" "RSS" "PGID" "SID"
+	    sort -nr -k9 .data.ps | head -$1
+	    }
+	    
+	    while true
+do
+
+    terminal_height=$(tput lines)
+    lines=$(( $terminal_height - 3 ))
+    my_ps $lines
+    break
+
+    done
