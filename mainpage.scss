@@ -24,26 +24,20 @@ section{
     p{
         font-size: $MyTextSize;
     }
-    .img{
-        float: left;
+    img{
+        @include size(5px, 5px, left);
         width:25%;
         height:30%;
-        @include size(5px, 5px);
     }
 
-    .img1{
+    #img1{
+        @extend .img;
         float: right;
         width: 15%;
-        height: 30%;
-        
+
     }
     @media ($MyMedia){
-        .img{
-            width: 95%;
-            @include size(5px, 5px,none);
-        }
-    
-        .img1{
+        img, #img1{
             width: 95%;
             @include size(5px, 5px,none);
         }

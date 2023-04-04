@@ -42,3 +42,7 @@ div{
         width: 20rem;;
     }
 }
+
+footer{
+    @include footer();
+}

@@ -35,14 +35,17 @@ nav{
 }
 
 main{
-    font-size: $MyHeaderSize;
-    .img{
+    img{
         width: 25rem;
         @include size(5px, 5px,left);
     }
-    .img1{
+    #img1{
+        @extend .img;
         width: 20rem;
-        @include size(5px, 5px,right);
+        float: right;
+    }
+    p{
+        font-size: $MyHeaderSize;
     }
 }
 

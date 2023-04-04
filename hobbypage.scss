@@ -13,13 +13,13 @@ body{
     }
 }
 
-div{
-    font-size: $MyHeaderbSize;
+header{
+    font-size: $MyTextSize;
+    color: $MyFootercolor;
     background-color: $MyBackgroundColor;
-    color: $MyTextbColor;
 }
 
-h1, h2{
+h1,h2,h3,h4{
     font-size: $MyHeadersSize;
 }
 
@@ -28,17 +28,15 @@ p{
 }
 
 img{
-    width: 60%;
-    @include size(5px,5px,left);
+    @include size(5px,5px, right);
+    width: 10 rem;;
 }
 
-@media ($MyMedia){
-    img{
-        width: 95%;
-        @include size(5px, 5px, none);
-    }
+#img{
+    @extend .img;
+    float: left;
 }
-   
-footer { /* Stopka */
+
+footer{
     @include footer();
 }

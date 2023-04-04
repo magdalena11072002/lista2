@@ -1,6 +1,6 @@
 @import url(_colors.scss);
 
-@mixin size($margin, $padding,$float){
+@mixin size($margin, $padding, $float){
     margin: $margin;
     padding: $padding;
     float: $float;
