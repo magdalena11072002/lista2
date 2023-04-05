@@ -1,7 +1,7 @@
 @charset 'utf-8';
-@import url(_colors.scss);
-@import url(_text.scss);
-@import url(_mixin.scss);
+@import "colors.scss";
+@import "text.scss";
+@import "mixin.scss";
 
 body{
     font-family: $MyFontText;
@@ -13,12 +13,12 @@ body{
     }
 }
 
-div{
-    header{
-        color: $MyFootercolor;
-        font-size: $MyHeaderbSize;
-    }
+header{
+    font-size: $MyHeaderSize;
+    background-color: $MyBackgroundColor;
+    color: $MyTextbColor;
 }
+
 
 nav{
     background-color: $MyBackgroundColor;
@@ -35,14 +35,14 @@ nav{
 }
 
 main{
-    img{
+    .img{
         width: 25rem;
         @include size(5px, 5px,left);
     }
-    #img1{
-        @extend .img;
+    .img1{
+        @include size(5px,5px,right);
         width: 20rem;
-        float: right;
+        
     }
     p{
         font-size: $MyHeaderSize;

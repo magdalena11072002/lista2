@@ -1,0 +1,54 @@
+@import url(_colors.scss);
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-image: url(zdjecia/tlozachy);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  font-size: 2.1rem;
+  background-color: black;
+  color: pink;
+}
+
+nav {
+  background-color: black;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  padding: 1 rem;
+}
+nav p {
+  margin-right: 1.2vw;
+  color: green;
+  -webkit-text-decoration: double;
+          text-decoration: double;
+}
+
+main .img {
+  width: 25rem;
+  margin: 5px;
+  padding: 5px;
+  float: left;
+  height: auto;
+}
+main .img1 {
+  margin: 5px;
+  padding: 5px;
+  float: right;
+  height: auto;
+  width: 20rem;
+}
+main p {
+  font-size: 2.1rem;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: black;
+  color: blueviolet;
+  clear: both;
+}/*# sourceMappingURL=projectpage.css.map */

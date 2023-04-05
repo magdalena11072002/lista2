@@ -1,7 +1,8 @@
 @charset 'utf-8';
-@import url(_colors.scss);
-@import url(_text.scss);
-@import url(_mixin.scss);
+@import "colors.scss";
+@import "text.scss";
+@import "mixin.scss";
+
 
 body{
     font-family: $MyFontText;
@@ -19,7 +20,16 @@ header{
     background-color: $MyBackgroundColor;
 }
 
-h1,h2,h3,h4{
+h1{
+    font-size: $MyHeadersSize;
+}
+h2{
+    font-size: $MyHeadersSize;
+}
+h3{
+    font-size: $MyHeadersSize;
+}
+h4{
     font-size: $MyHeadersSize;
 }
 
@@ -27,14 +37,13 @@ p{
     font-size: $MyParagraphSize;
 }
 
-img{
-    @include size(5px,5px, right);
-    width: 10 rem;;
+.img{
+    @include size(3px, 3px, left);
+    width: 10rem;
 }
-
-#img{
-    @extend .img;
-    float: left;
+.img1{
+    @include size(3px,3px,right);
+    width: 10rem;
 }
 
 footer{
